@@ -21,13 +21,11 @@ class SolarCity:
     
     format_string = '%Y-%m-%dT%H:%M:%S'
         
-    def __init__( self, guid, token, persistance ):
+    def __init__( self, guid, token ):
 
         self.GUID = guid
         self.TOKEN = token
-        self.PERSIST_TOKEN = persistance
         self.cookies[ 'FedAuth' ] = self.TOKEN
-        #self.cookies['persistance'] = self.PERSIST_TOKEN
 
         self.costs = self.get_costs()
 
